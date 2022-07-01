@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 7. run frpc.exe -c frpc.ini and before that ensure localhost blockchain node is running.
 8. we access or run this using moralis cli.
 9. run yarn global add moralis-admin-cli for getting cli.
-10. add new command in script, "moralis:sync":"moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain gqucgdywy1as.usemoralis.com(server-url) --frpcPath ./frp/frpc"
+10. add new command in script, "moralis:sync":"moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain server-url --frpcPath ./frp/frpc"
 11. for this we need CLI API Key,CLI API Secret. so add them in .env file.
 12. to create a sync service and it will update the DB by listening to the event trigger.
 13. create addEvents.js file for the service.
@@ -51,7 +51,7 @@ If the node is stop and restarted, make the localchain reset in the moralis app,
     moralis-admin-cli watch-cloud-folder
     --moralisApiKey apikey
     --moralisApiSecret apiSecret
-    --moralisSubdomain subdomain in server url
+    --moralisSubdomain (subdomain in server url)
     --autoSave 1
     --moralisCloudfolder /path/to/cloud/folder
 
